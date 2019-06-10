@@ -9,7 +9,7 @@ module.exports = [
     name: "Wordcraft",
     thumbnail: "wordcraft-t.png",
     image: "",
-    copy: "Wordcraft is ...",
+    copy: "Wordcraft is ..",
   },
   {
     name: "Good Search",
