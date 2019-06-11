@@ -43,7 +43,7 @@ export default class ProjectPage extends Component {
     const { project, previousProject, nextProject } = this.state
     if (!project) return null
 
-    const { name, copy, image } = project
+    const { name, copy, image, technologies } = project
 
     return (
       <Layout>
@@ -51,14 +51,13 @@ export default class ProjectPage extends Component {
 
         <div style={{ textAlign: "center" }}>
           <div
+            id="project-nav"
             style={{
               position: "fixed",
               display: "flex",
               justifyContent: "space-between",
               top: "50%",
               marginBottom: "20px",
-              width: "calc(100vw - 20px)",
-              left: "10px",
             }}
           >
             <Link
@@ -66,12 +65,10 @@ export default class ProjectPage extends Component {
               style={{ color: "black", textDecoration: `none`, margin: 0 }}
             >
               <img
+                className="arrow"
                 style={{
-                  width: "60px",
-                  height: "60px",
                   transform: "rotate(180deg)",
                   cursor: "pointer",
-                  padding: "10px",
                 }}
                 src={arrow}
               />
@@ -81,11 +78,9 @@ export default class ProjectPage extends Component {
               style={{ color: "black", textDecoration: `none`, margin: 0 }}
             >
               <img
+                className="arrow"
                 style={{
-                  width: "60px",
-                  height: "60px",
                   cursor: "pointer",
-                  padding: "10px",
                 }}
                 src={arrow}
               />
@@ -97,14 +92,40 @@ export default class ProjectPage extends Component {
               fontSize: "1.2em",
               letterSpacing: "0.5px",
               margin: "50px 0 30px 0",
+              backgroundColor: "white",
             }}
           >
             <b>{name}</b>
           </p>
 
-          <p style={{ maxWidth: "600px", textAlign: "left", margin: "0 auto" }}>
+          <p
+            style={{
+              maxWidth: "600px",
+              textAlign: "left",
+              margin: "0 auto",
+              backgroundColor: "white",
+            }}
+          >
             {copy}
+
+            <span
+              style={{
+                fontSize: "0.8em",
+                display: "block",
+                marginTop: "15px",
+                backgroundColor: "white",
+              }}
+            >
+              <b style={{ marginRight: "10px" }}>Technologies:</b>
+              {technologies.sort().join(", ")}
+            </span>
           </p>
+
+          <img
+            className="project-image"
+            style={{ width: "100%", marginTop: "20px" }}
+            src={require(`../images/${image}`)}
+          />
         </div>
       </Layout>
     )

@@ -1,7 +1,7 @@
 svg {
   position: absolute;
-  height: 100vh;
   width: 100vw;
+  height: 100%;
   top: 0;
   z-index: -999;
   left: 0;
@@ -17,6 +17,38 @@ path {
 @keyframes dash {
   to {
     stroke-dashoffset: 500;
+  }
+}
+
+.project-image {
+  padding: 0 50px;
+}
+
+#project-nav .arrow {
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+}
+
+#project-nav {
+  width: calc(100vw - 20px);
+  left: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+  .project-image {
+    padding: 0 10px;
+  }
+
+  #project-nav .arrow {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+
+  #project-nav {
+    width: 100vw;
+    left: 0;
   }
 }
 
