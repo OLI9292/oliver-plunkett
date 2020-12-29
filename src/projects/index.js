@@ -1,22 +1,46 @@
 module.exports = [
   {
+    name: "Radimal AI",
+    thumbnail: "radimal-ai.png",
+    image: "radimal-ai.png",
+    copy: "Puppy predictions, straight to your inbox.",
+    technologies: ["Python", "AWS", "Orthanc"],
+  },
+  {
+    name: "Mack Weldon",
+    thumbnail: "mack-weldon-t.png",
+    image: "mack-weldon.png",
+    copy:
+      "For a while I delved into the world of men's underwear, and what a world it was.",
+    technologies: ["Shopify", "Ruby"],
+  },
+  {
+    name: "Tour Food",
+    thumbnail: "tour-food-t.png",
+    image: "tour-food.png",
+    copy:
+      "A restaurant finder I engineered for the band members from Frankie Cosmos and other musicians. The backend is a Google Sheet.",
+    technologies: ["JavaScript", "Google Sheets", "Google Apps Scripts"],
+  },
+
+  {
     name: "Wordcraft",
     thumbnail: "wordcraft-t.png",
     image: "wordcraft.png",
     copy:
-      "As a CTO and cofounder at Wordcraft, I build software that gameifies words and passages spanning Indo-European languages and programming languages. Our desktop program is used in over 500 schools across the world, and our iOS app was perfectly reviewed.",
+      "As a CTO and cofounder at Wordcraft, I build software that gameifies words and passages spanning Indo-European languages and programming languages. Our desktop program is used in thousands of schools across the world, and our iOS app is perfectly reviewed.",
     technologies: [
-      "React",
-      "Typescript",
-      "Node",
-      "GraphQL",
-      "Flask",
-      "Redis",
       "ElasticSearch",
+      "Flask",
+      "GraphQL",
       "MongoDB",
+      "Node",
       "Postgres",
-      "NLTK",
+      "React",
+      "Redis",
       "Swift",
+      "TypeScript",
+      "spaCy",
     ],
   },
   {

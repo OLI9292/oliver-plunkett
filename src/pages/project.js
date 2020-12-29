@@ -87,16 +87,26 @@ export default class ProjectPage extends Component {
             </Link>
           </div>
 
-          <p
+          <h2
             style={{
-              fontSize: "1.2em",
-              letterSpacing: "0.5px",
-              margin: "50px 0 30px 0",
+              letterSpacing: "1px",
+              margin: "20px 0 0 0",
               backgroundColor: "white",
             }}
           >
-            <b>{name}</b>
-          </p>
+            {name}
+          </h2>
+
+          <img
+            className="project-image"
+            style={{
+              width: "auto",
+              maxHeight: "450px",
+              height: "100%",
+              margin: "30px 0",
+            }}
+            src={require(`../images/${image}`)}
+          />
 
           <p
             style={{
@@ -120,12 +130,6 @@ export default class ProjectPage extends Component {
               {technologies.sort().join(", ")}
             </span>
           </p>
-
-          <img
-            className="project-image"
-            style={{ width: "100%", marginTop: "20px" }}
-            src={require(`../images/${image}`)}
-          />
         </div>
       </Layout>
     )
